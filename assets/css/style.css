@@ -26,6 +26,17 @@ body {
   clear: both;
 }
 
+.clickme {
+  COLOR:rgb(12, 182, 26);
+  font-size: xx-large;
+  
+}
+
+
+#quiz {
+  clear:both;
+}
+
 /* Logo Styling  */
 h1{
   width:600px;
