@@ -1,6 +1,52 @@
 
 $( document ).ready(function() 
 {
+    var $clickme = $('.clickme'),
+        $box = $('.box');
+
+    $box.hide();
+
+$clickme.click( function(e) {
+    $(this).text(($(this).text() === 'Hide' ? 'Start' : '')).next('.box').slideToggle();
+    e.preventDefault();
+});
+
+
+    var count = 30;
+setInterval(function() {
+    count--;                   console.log("counter: " + count);
+    $('#timer').text(count);
+
+    // update timer here
+
+    if (count === 0) {
+        count = 30;
+        // ajax code here
+        $('#secsleft').text(count);
+    }
+}, 1000);
+
+
+    $(function() 
+    {
+        $('.exp').hide();
+        $('.red').hide();
+        $('input[name="test"]').on('click', function() 
+        {
+          var el = $(this);
+          if (el.val() == 'ans') {
+            el.parents('.q').nextAll('.exp').first().show();
+            el.parents('.q').nextAll('.red').first().hide();
+            $('.red').hide();
+          } else {
+            el.parents('.q').nextAll('.red').first().show();
+            el.parents('.q').nextAll('.exp').first().hide();
+          }
+        })
+    }) 
+});
+   
+    /*
    var quizcontainer   = $('')
    var resultsontainer = $('')
    var submitButton    = $('')
@@ -94,3 +140,5 @@ $( document ).ready(function()
     // add html radio buttons
     
 });
+
+*/
