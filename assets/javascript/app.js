@@ -1,49 +1,51 @@
 
 $( document ).ready(function() 
 {
+    var Pcorrect = 0;  Pincorrect = 0;
     var $clickme = $('.clickme'),
         $box = $('.box');
 
     $box.hide();
 
-$clickme.click( function(e) {
-    $(this).text(($(this).text() === 'Hide' ? 'Start' : '')).next('.box').slideToggle();
-    e.preventDefault();
-});
+    $clickme.click( function(e) 
+      {
+        $(this).text(($(this).text() === 'Hide' ? 'Start' : '')).next('.box').slideToggle();
+        e.preventDefault();
+      });
 
 
     var count = 30;
-setInterval(function() {
-    count--;                   console.log("counter: " + count);
-    $('#timer').text(count);
+    var cntDown =setInterval(function() 
+          {
+            count--;                   console.log("counter: " + count);
+            $('#timer').text(count);
 
-    // update timer here
+            // update timer here
 
-    if (count === 0) {
-        count = 30;
-        // ajax code here
-        $('#secsleft').text(count);
-    }
-}, 1000);
+            if (count === 0) 
+                {
+                clearInterval(cntDown);
+                }
+          }, 1000);
 
-
+ 
     $(function() 
-    {
-        $('.exp').hide();
-        $('.red').hide();
-        $('input[name="test"]').on('click', function() 
         {
-          var el = $(this);
-          if (el.val() == 'ans') {
-            el.parents('.q').nextAll('.exp').first().show();
-            el.parents('.q').nextAll('.red').first().hide();
+            $('.exp').hide();
             $('.red').hide();
-          } else {
-            el.parents('.q').nextAll('.red').first().show();
-            el.parents('.q').nextAll('.exp').first().hide();
-          }
-        })
-    }) 
+            $('input[name="test"]').on('click', function() 
+            {
+            var el = $(this);
+            if (el.val() == 'ans') {
+                el.parents('.q').nextAll('.exp').first().show();
+                el.parents('.q').nextAll('.red').first().hide();
+                $('.red').hide();
+            } else {
+                el.parents('.q').nextAll('.red').first().show();
+                el.parents('.q').nextAll('.exp').first().hide();
+            }
+            })
+        }) 
 });
    
     /*
