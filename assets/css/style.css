@@ -39,6 +39,17 @@ body {
   clear: both;
 }
 
+#aside{
+  /* background-image: url(../Images/gameback.jpg); */
+  border: 10px thick red;
+  width: 50%;
+  height: 50%;
+  max-width: 960px;
+  margin: 0 auto;
+  margin-top: 10px;
+  clear: both;
+}
+
 .clickme {
   COLOR:rgb(12, 182, 26);
   font-size: xx-large;
