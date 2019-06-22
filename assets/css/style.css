@@ -5,23 +5,9 @@
   box-sizing: border-box;
 }
 
-.clickme {
-  width: 100%;
-  height: 100%;
-background-color: white;
-padding: 10px;
-
-background: white;
-color: black;
-margin-left: 270px;
-margin-top: 100px;
-box-align: center;
-}
-
 body {
   /* Typography */
 
-  
  /* background: url('./concrete_seamless.png'); */
   line-height: 27px;
 
@@ -30,7 +16,6 @@ body {
 }
 
 .container{
-  /* background-image: url(../Images/gameback.jpg); */
   width: 100%;
   height: 100%;
   max-width: 960px;
@@ -39,16 +24,69 @@ body {
   clear: both;
 }
 
-#aside{
-  /* background-image: url(../Images/gameback.jpg); */
-  border: 10px thick red;
-  width: 50%;
-  height: 50%;
-  max-width: 960px;
-  margin: 0 auto;
-  margin-top: 10px;
-  clear: both;
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+  padding: 20px;
+  color:#8d1a9cb9
 }
+
+#Your-WScore, #Your-LScore {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+  font-weight: bolder;
+  color: black;
+}
+
+#panel, #flip {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+  padding: 20px;
+  text-align: center;
+  background-color: blue;
+  border: solid 2px #fff;
+  color: white;
+  width: 270px;
+  height: 100px;
+  text-align: center;
+  margin-left: 500px;
+}
+
+#panel {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+  width:   330px;
+  padding: 20px;
+  display: none;
+  text-align: center;
+}
+
+#img_gameover {
+width: 600px;
+height: 300px;
+
+}
+
+.centered {
+  position: fixed;
+  top: 30%;
+  left: 30%;
+  margin-top: -100px;
+  margin-left: -75px;
+}
+
+.exp {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+  color:#0e42d1;
+}
+ 
+.red {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 24px;
+  color: rgb(216, 2, 2);
+}
+ 
 
 .clickme {
   COLOR:rgb(12, 182, 26);
@@ -131,5 +169,3 @@ img {
     color: white;
     width: 200px;
   }
-
-
