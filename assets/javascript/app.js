@@ -1,21 +1,28 @@
 
 $( document ).ready(function() 
 {
+    $('#quiz-board').hide();
+    $('#GameOver').hide();
+    $('#container').hide();
+    $('#Your-LScore').hide();
+    $('#relansws').hide();
+
     var qRight      = 0;  
     var qWrong      = 0;
     var allAnswered = 0;
 
-    var $clickme = $('.clickme'),
+    var $clickme = $('.btn'),
         $box = $('.box');
 
-    $box.hide();
-
-    $clickme.click( function(e) 
-      {
-        $(this).text(($(this).text() === 'Hide' ? 'Start' : '')).next('.box').slideToggle();
-        e.preventDefault();
-      });
-
+    
+    $('#flip').click(function() 
+       {
+           $('#panel').slideDown('fast');
+           $('#quiz-board').show();
+       });
+         //  $(this).text(($(this).text() === 'Hide' ? 'Start' : '')).next('.box').slideToggle();
+         //  e.preventDefault();
+      
 
     var count = 30;
     var cntDown =setInterval(function() 
@@ -32,8 +39,18 @@ $( document ).ready(function()
                 $('.q').hide();
                 $('.exp').hide();
                 $('.red').hide();
-                console.log("GAME OVER");
-                confirm("GAME OVER: Correct Answers: " + qRight + " Wrong Answers: " + qWrong);
+               // console.log("GAME OVER");
+                $('#wins').text(qRight);
+                $('#losses').text(qWrong);
+                $('#container').hide();
+                $('#h1tag').hide();
+                $('#flip').hide();
+                $('#panel').hide();
+                $('#GameOver').show();
+                $('#Your-LScore').show();
+                $('#relansws').show();
+
+                //("GAME OVER: Correct Answers: " + qRight + " Wrong Answers: " + qWrong);
                 }
           }, 1000);
 
@@ -49,7 +66,7 @@ $( document ).ready(function()
                 {
                     Plyrsanswr.parents('.q').nextAll('.exp').first().show();
                     Plyrsanswr.parents('.q').nextAll('.red').first().hide();
-                    $('.red').hide();
+                    $('.ans').hide();
                     qRight = qRight + 1;
                     allAnswered = allAnswered +1;
                     console.log("Correct answwers: " +qRight);
@@ -58,15 +75,13 @@ $( document ).ready(function()
             else 
                 {
                     Plyrsanswr.parents('.q').nextAll('.red').first().show();
-                    Plyrsanswr.parents('.q').nextAll('.exp').first().hide();
+                    Plyrsanswr.parents('.q').nextAll('.exp').first().hide(); 
                     qWrong = qWrong + 1;
                     allAnswered = allAnswered +1;
                     console.log("Incorrect answwers: " +qWrong);
                 }
             })
-        })  
-
-        
+        })        
 });
    
 
