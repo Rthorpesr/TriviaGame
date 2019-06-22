@@ -3,29 +3,100 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>COUNT DOWN</title>
+  <title>REGGIE's QUIZ GAME</title>
 
-  <!-- <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" /> -->
-  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <!-- Added a link to Bootstrap-->
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-
-  <!-- <link rel="stylesheet" type="text/css" href="./assets/css/style.css"> -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
 
 </head>
 
     <body>
+        
+        <div  id="flip">Click here to start your Quiz</div>
+        <div id="panel">Your time starts now: <label id="timer"></label>
+        </div>
+             <!-- <h2>Your time starts now: <label id="timer"></label></h2> -->
+        
 
+              <!-- <a href="#" class="clickme">Click here: To start the Quiz</a> -->
+              <!-- <button type="button" class="btn btn-primary">Click to Start your Quiz</button> -->
+        </div>
+      
+        <div class="container" id="quiz-board">
 
-        <div class = "container">
-             <h1>Welcome to Reggie's Quiz Game</h1>
-              <h2>Your time starts now: <label id="timer"</h2>
+               <div id="h1tag"><h1 id="h1">Welcome to Reggie's Quiz Games</h1></div>
+                
+                
+                
+                <div id="quiz"></div>
+                <!-- <button id="submit">Submit quiz</button> -->
+                <!-- <div id="results"></div> -->
+                <form class="q">
+                    <h4>1. What company created the first computer? </h4>
+                    <input name="test" type="radio" value="ans" /> A) Osborne Computers
+                    <input name="test" type="radio" value="inc"/>  B) Macintosh
+                    <input name="test" type="radio" value="inc" /> C) HP
+                    <input name="test" type="radio" value="inc" /> D) Intel
+                    <input name="test" type="radio" value="inc" /> E) IBM
+                </form>
+                <br>
+                <div class="exp"> A is right </div>
+                <div class="red"> Wrong - The correct answer is <strong>"A"</strong> - Osborne Computers</div> 
+                <br>
+                <form class="q">
+                    <h4>2. In what year did Father's Day become a federal holiday? </h4>
+                    <input name="test" type="radio" value="inc" /> A) 1962
+                    <input name="test" type="radio" value="ans"/>  B) 1967
+                    <input name="test" type="radio" value="inc" /> C) 1972
+                    <input name="test" type="radio" value="inc" /> D) 1957
+                    <input name="test" type="radio" value="inc" /> E) 1947
+                </form>
+                <br>
+                <div class="exp"> B is right </div>
+                <div class="red"> Wrong - The  correct answer is <strong>"B"</strong> - 1967</div>
+                <br>
+                <form class="q">
+                    <h4>3. What man-made lake was created by the building of the Hoover Dam? </h4>
+                    <input name="test" type="radio" value="inc" /> A) Lake Powell
+                    <input name="test" type="radio" value="inc"/>  B) Salton Sea
+                    <input name="test" type="radio" value="ans" /> C) Lake Mead
+                    <input name="test" type="radio" value="inc" /> D) Colorado Lake
+                    <input name="test" type="radio" value="inc" /> E) Lake Hoover Dam
+                </form>
+                <br>
+                <div class="exp"> C is right </div>
+                <div class="red"> Wrong - The correct answer is <strong>"C"</strong> - Lake Mead</div>  
+                <br>
+                <form class="q">
+                    <h4>4. What U.S.State is nicknamed "The Bluegrass State"? </h4>
+                    <input name="test" type="radio" value="inc" /> A) Alabama
+                    <input name="test" type="radio" value="ans"/>  B) Kentucky
+                    <input name="test" type="radio" value="inc" /> C) Virigina
+                    <input name="test" type="radio" value="inc" /> D) Tennesse
+                    <input name="test" type="radio" value="inc" /> E) Nebraka
+                </form>
+                <br>
+                <div class="exp"> B is right </div>
+                <div class="red"> Wrong - The  correct answer is <strong>"C"</strong> - Kentucky</div>
+                <br>
+               </div>   
 
-             <div id="quiz"></div>
-             <!-- <button id="submit">Submit quiz</button> -->
-             <!-- <div id="results"></div> -->
+               <div class="centered"  id="GameOver">  
+                    <img id="img_gameover" src="./assets/images/gameover.jpg" alt="gameisover" ></img>
+                    <div id="Your-WScore">Number Answered Correct: <label id="wins"></label>
+                    <div id="Your-LScore">Number Answered Incorrect: <label id="losses"></label>  
+                        <p id="relansws">The correct answers again are:<br>   
+                        1. (A) Osborne Computers <br>
+                        2. (B) 1967 <br>
+                        3. (C) Lake Mead<br>
+                        4. (B) Kentucky </p>
+            </div>
+        </div>
 
 
                 <script type="text/javascript">
@@ -38,4 +109,5 @@
 </body> 
 </html>
     
+ 
  
