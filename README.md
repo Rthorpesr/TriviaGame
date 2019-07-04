@@ -6,6 +6,9 @@ Written by: Reginald D. Thorpe
  This TriviaGame was created during the 3rd week of the George Washington University Bootcamp.
  This program was written using HTML, JavaScript, and jQuery.
  
+ Visit the game at: https://rthorpesr.github.io/TriviaGame/
+
+ 
  The purpose of this program:
  
  1.)  Create a trivia form with multiple choice or true/false options (your choice).
