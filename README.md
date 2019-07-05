@@ -24,3 +24,12 @@ Written by: Reginald D. Thorpe
 6.)   Don't forget to include a countdown timer.
 
 * The main point of the game is to learn how html, JavaScript, and jQuery works together.
+
+The Problem: 
+1.) SetInterval - We were to give a set amount of time to complete the game, but if the clock runs down to zero before
+all the questions are answers, then the game is to end and let the player know their score.
+2.) You had to keep track of the number of questions answered correctly and incorrectly as well as stopping the interval count at zero and resetting it for the next game. One issue was that if you do not stop the Interval count properly, the clock will continue to count, but using negative numbers such as " -29, -28.....).
+
+Solved:
+1.) Using Javascript, I wrote a function that stopped and cleared the interval when the clock struck zero. This ensured the counter would always stop at zero and end the game. Also, I set variable for the number of correctly answered questions and a variable for incorrectly answered variables.
+2. When the game ends, I display these variables as questions correct and questions incorrect. I also so the player the correct answers for each questions. The correct answers for each question are stored in an array and the array is what the player sees on screen.
